@@ -13,7 +13,6 @@
 
 <body>
 
-
     <p id="myText">Manupilating the dom</p>
 
     <button id="myButton" onClick="changeText()">Change Text </button>
@@ -25,9 +24,24 @@
         // let studentAverageMark = 50; 
 
       
-        function changeText() {
-            document.getElementById("myText").innerHTML = "Hello World"; 
+        // function changeText() {
+        //     document.getElementById("myText").innerHTML = "Hello World"; 
+        // }
+
+        const outputText = "Hello World"
+
+
+        const changeText = () => {
+
+            document.getElementById("myText").innerHTML = outputText ; 
         }
+
+        console.log(outputText); 
+
+        const myString = `AAAA`; 
+        const myString2 = 1;
+        
+        const myStringParagraph = `${myString + myString2}` ; 
             
 
         const student = {
