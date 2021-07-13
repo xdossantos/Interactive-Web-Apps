@@ -17,6 +17,10 @@
 
     <button id="myButton" onClick="changeText()">Change Text </button>
 
+    <ul id="students">
+
+    </ul>
+
     <script type="text/javascript">
 
         // student
@@ -43,12 +47,46 @@
         
         const myStringParagraph = `${myString + myString2}` ; 
             
+        let classRoom = []; 
 
-        const student = {
+        const student0 = {
             name: "Xola",
             averageMark: 75
         }
 
+        classRoom.push(student0); 
+
+        const student1 = {
+            name: "John",
+            averageMark: 65
+        }
+
+        
+        classRoom.push(student1);
+
+        const student2 = {
+            name: "Sam",
+            averageMark: 95
+        }
+
+        const student3 = {
+            "name": "Joseph", 
+            "averagemark": "25"
+        }; 
+
+        classRoom.push(student3);
+
+        console.log("classRoom Array/DataSet")
+
+        console.log(classRoom)
+
+        for (student of classRoom) {
+            console.log(student.name); 
+        }
+
+        const listItems = classRoom.map(  (student) => { return `<li>${student.name}</li>`})
+
+        document.getElementById("students").innerHTML = listItems; 
         //course 
         // let isCourseRunning = true; 
         // let countStudents = 1; 
@@ -59,9 +97,7 @@
             name: "Front End Engineering"
         }
 
-        console.log();
 
-        const objectArr = [student, course];
 
         // document.write(student.name);
 
